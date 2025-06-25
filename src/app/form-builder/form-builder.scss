@@ -1,9 +1,21 @@
-:host {
+form-builder {
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  .row {
+    background-color: #fff;
+    min-height: 40px;
+    border: 1px dashed #000;
+    padding: 4px;
+  }
+
+  *:focus {
+    border-width: 2px;
+    border-color: blue;
+  }
 }
 
-.container {
+.form-builder-container {
   flex: 1;
 }
