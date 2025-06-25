@@ -2,11 +2,16 @@
 <button type="button" (click)="toggleSecondSide()">RT</button>
 <mat-drawer-container class="form-builder-container">
   <mat-drawer mode="side" position="start" [opened]="navSideOpened">
-    @for (tag of controls; track tag) {
-    <div draggable="true" (dragstart)="handleDragStart($event, 'insert', tag)">
-      {{ tag }}
+    <div>
+      @for (tag of controls; track tag) {
+      <div
+        draggable="true"
+        (dragstart)="handleDragStart($event, 'insert', tag)"
+      >
+        {{ tag }}
+      </div>
+      }
     </div>
-    }
   </mat-drawer>
   <mat-drawer-content style="display: flex">
     <div
